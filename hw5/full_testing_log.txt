@@ -1,0 +1,213 @@
+
+--------------------------------------------------------------------------------
+Проверка для ACC-100001 (checking)
+--------------------------------------------------------------------------------
+Всего строк в CSV: 105 (весь файл)
+Найдено строк в файле для ACC-100001: 52
+
+Примеры строк из файла для этого счёта (первые x, где x = 5):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100001     checking 2025-09-27 22:17:26   deposit   921.0         2121.0 success
+    ACC-100001     checking 2025-09-27 22:17:26   deposit   607.0         2728.0 success
+    ACC-100001     checking 2025-09-28 22:17:26   deposit   488.0         3216.0 success
+    ACC-100001     checking    28/09/2025 22:17   deposit   129.0         3345.0 success
+    ACC-100001     checking 2025-09-29 22:17:26   deposit   880.0         4225.0 success
+
+После clean_history(): валидных строк = 40, инвалидных = 12
+
+Первые 5 валидных строк (после clean_history):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100001     checking 2025-09-27 22:17:26   deposit   921.0         2121.0 success
+    ACC-100001     checking 2025-09-27 22:17:26   deposit   607.0         2728.0 success
+    ACC-100001     checking 2025-09-27 22:17:26   deposit   607.0         2728.0 success
+    ACC-100001     checking 2025-09-27 22:17:26   deposit   921.0         2121.0 success
+    ACC-100001     checking 2025-09-28 22:17:00   deposit   129.0         3345.0 success
+
+Последние 5 валидных строк (после clean_history):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100001     checking 2025-10-17 22:17:26  withdraw   308.0         7824.0 success
+    ACC-100001     checking 2025-10-18 22:17:26   deposit   135.0         7959.0 success
+    ACC-100001     checking 2025-10-18 22:17:26   deposit   135.0         7959.0 success
+    ACC-100001     checking 2025-10-19 22:17:26   deposit   916.0         8875.0 success
+    ACC-100001     checking 2025-10-19 22:17:26   deposit   916.0         8875.0 success
+
+Баланс до load_history: 0.00, операций в истории: 0
+Баланс после load_history (CSV+JSON): 19004.00, операций добавлено: 66
+
+Краткая история операций (последние 10 записей):
+2025-10-16 22:17:26 | withdraw | amount=393.0 | balance=17101.0 | status=success
+2025-10-16 22:17:26 | deposit | amount=701.0 | balance=17802.0 | status=success
+2025-10-16 22:17:26 | withdraw | amount=393.0 | balance=17409.0 | status=success
+2025-10-17 22:17:26 | deposit | amount=999.0 | balance=18408.0 | status=success
+2025-10-17 22:17:26 | withdraw | amount=308.0 | balance=18100.0 | status=success
+2025-10-18 22:17:26 | deposit | amount=135.0 | balance=18235.0 | status=success
+2025-10-18 22:17:26 | withdraw | amount=268.0 | balance=17967.0 | status=success
+2025-10-19 22:17:26 | deposit | amount=916.0 | balance=18883.0 | status=success
+2025-10-20 22:17:26 | withdraw | amount=118.0 | balance=18765.0 | status=success
+2025-10-21 22:17:26 | deposit | amount=239.0 | balance=19004.0 | status=success
+
+--------------------------------------------------------------------------------
+Проверка для ACC-100002 (savings)
+--------------------------------------------------------------------------------
+Всего строк в CSV: 105 (весь файл)
+Найдено строк в файле для ACC-100002: 54
+
+Примеры строк из файла для этого счёта (первые x, где x = 5):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100002      savings 2025-09-27 22:17:26   deposit   469.0        1969.00 success
+    ACC-100002      savings 2025-09-27 22:17:26  withdraw   392.0        1577.00 success
+    ACC-100002      savings 2025-09-28 22:17:26   deposit   317.0        1894.00 success
+    ACC-100002      savings 2023-22-32 12:00:00   deposit   797.0        2691.00 success
+    ACC-100002      savings 2025-09-30 22:17:26  interest     NaN        2825.55 success
+
+После clean_history(): валидных строк = 44, инвалидных = 10
+
+Первые 5 валидных строк (после clean_history):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100002      savings 2025-09-27 22:17:26   deposit   469.0         1969.0 success
+    ACC-100002      savings 2025-09-27 22:17:26  withdraw   392.0         1577.0 success
+    ACC-100002      savings 2025-09-27 22:17:26  withdraw   392.0         1577.0 success
+    ACC-100002      savings 2025-09-27 22:17:26   deposit   469.0         1969.0 success
+    ACC-100002      savings 2025-09-28 22:17:26   deposit   317.0         1894.0 success
+
+Последние 5 валидных строк (после clean_history):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100002      savings 2025-10-19 22:17:26  withdraw  300.00        6042.66 success
+    ACC-100002      savings 2025-10-20 22:17:26  interest  302.13        6344.79 success
+    ACC-100002      savings 2025-10-20 22:17:26  interest  302.13        6344.79 success
+    ACC-100002      savings 2025-10-23 22:17:26  withdraw  282.00        5605.79 success
+    ACC-100002      savings 2025-10-23 22:17:26  withdraw  282.00        5605.79 success
+
+Баланс до load_history: 0.00, операций в истории: 0
+Баланс после load_history (CSV+JSON): 23558.88, операций добавлено: 94
+
+Краткая история операций (последние 10 записей):
+2025-10-15 22:17:26 | deposit | amount=789.0 | balance=21690.5 | status=success
+2025-10-17 22:17:26 | withdraw | amount=286.0 | balance=21404.5 | status=success
+2025-10-17 22:17:26 | deposit | amount=864.0 | balance=22268.5 | status=success
+2025-10-19 22:17:26 | deposit | amount=696.0 | balance=22964.5 | status=success
+2025-10-19 22:17:26 | interest | amount=503.25 | balance=23467.75 | status=success
+2025-10-19 22:17:26 | withdraw | amount=300.0 | balance=23167.75 | status=success
+2025-10-19 22:17:26 | withdraw | amount=300.0 | balance=22867.75 | status=success
+2025-10-19 22:17:26 | deposit | amount=671.0 | balance=23538.75 | status=success
+2025-10-20 22:17:26 | interest | amount=302.13 | balance=23840.88 | status=success
+2025-10-23 22:17:26 | withdraw | amount=282.0 | balance=23558.88 | status=success
+
+Топ-3 крупных операций (get_largest_operations):
+2025-10-02 22:17:26 | deposit | 937.0₽ | Баланс: 4312.0₽
+2025-10-02 22:17:26 | deposit | 937.0₽ | Баланс: 16091.44₽
+2025-10-17 22:17:26 | deposit | 864.0₽ | Баланс: 10489.06₽
+
+--------------------------------------------------------------------------------
+Проверка для ACC-100003 (checking)
+--------------------------------------------------------------------------------
+Всего строк в CSV: 105 (весь файл)
+Найдено строк в файле для ACC-100003: 42
+
+Примеры строк из файла для этого счёта (первые x, где x = 5):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100003     checking 2025-10-02 22:17:26   deposit   233.0         1033.0 success
+    ACC-100003     checking 2025-10-03 22:17:26  interest   292.0          741.0 success
+    ACC-100003     checking 2025-10-05 22:17:26   deposit   720.0         1461.0 success
+    ACC-100003     checking 2025-10-05 22:17:26  interest   290.0         1171.0 success
+    ACC-100003     checking 2025-10-06 22:17:26   deposit   296.0         1467.0 success
+
+После clean_history(): валидных строк = 26, инвалидных = 16
+
+Первые 5 валидных строк (после clean_history):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100003     checking 2025-10-02 22:17:26   deposit   233.0         1033.0 success
+    ACC-100003     checking 2025-10-02 22:17:26   deposit   233.0         1033.0 success
+    ACC-100003     checking 2025-10-05 22:17:26   deposit   720.0         1461.0 success
+    ACC-100003     checking 2025-10-05 22:17:26   deposit   720.0         1461.0 success
+    ACC-100003     checking 2025-10-06 22:17:26   deposit   296.0         1467.0 success
+
+Последние 5 валидных строк (после clean_history):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100003     checking 2025-10-18 22:17:26  withdraw   268.0         4858.0 success
+    ACC-100003     checking 2025-10-20 22:17:26  withdraw   118.0         4395.0 success
+    ACC-100003     checking 2025-10-20 22:17:26  withdraw   118.0         4395.0 success
+    ACC-100003     checking 2025-10-21 22:17:26   deposit   239.0         4634.0 success
+    ACC-100003     checking 2025-10-21 22:17:26   deposit   239.0         4634.0 success
+
+Баланс до load_history: 0.00, операций в истории: 0
+Баланс после load_history (CSV+JSON): 19004.00, операций добавлено: 66
+
+Краткая история операций (последние 10 записей):
+2025-10-16 22:17:26 | withdraw | amount=393.0 | balance=17101.0 | status=success
+2025-10-16 22:17:26 | deposit | amount=701.0 | balance=17802.0 | status=success
+2025-10-16 22:17:26 | withdraw | amount=393.0 | balance=17409.0 | status=success
+2025-10-17 22:17:26 | deposit | amount=999.0 | balance=18408.0 | status=success
+2025-10-17 22:17:26 | withdraw | amount=308.0 | balance=18100.0 | status=success
+2025-10-18 22:17:26 | deposit | amount=135.0 | balance=18235.0 | status=success
+2025-10-18 22:17:26 | withdraw | amount=268.0 | balance=17967.0 | status=success
+2025-10-19 22:17:26 | deposit | amount=916.0 | balance=18883.0 | status=success
+2025-10-20 22:17:26 | withdraw | amount=118.0 | balance=18765.0 | status=success
+2025-10-21 22:17:26 | deposit | amount=239.0 | balance=19004.0 | status=success
+
+--------------------------------------------------------------------------------
+Проверка для ACC-100004 (savings)
+--------------------------------------------------------------------------------
+Всего строк в CSV: 105 (весь файл)
+Найдено строк в файле для ACC-100004: 62
+
+Примеры строк из файла для этого счёта (первые x, где x = 5):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100004      savings 2025-09-22 22:17:26   diposit   838.0         2838.0 success
+    ACC-100004      savings 2025-09-23 22:17:26   deposit   192.0         3030.0 success
+    ACC-100004      savings 2025-09-23 22:17:26   deposit   662.0         3692.0 success
+    ACC-100004      savings 2025-09-24 22:17:26  withdraw   441.0         3251.0  succes
+    ACC-100004      savings 2025-09-24 22:17:26   deposit   649.0         3900.0 success
+
+После clean_history(): валидных строк = 50, инвалидных = 12
+
+Первые 5 валидных строк (после clean_history):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100004      savings 2025-09-22 22:17:26   deposit   838.0         2838.0 success
+    ACC-100004      savings 2025-09-22 22:17:26   deposit   838.0         2838.0 success
+    ACC-100004      savings 2025-09-23 22:17:26   deposit   662.0         3692.0 success
+    ACC-100004      savings 2025-09-23 22:17:26   deposit   662.0         3692.0 success
+    ACC-100004      savings 2025-09-23 22:17:26   deposit   192.0         3030.0 success
+
+Последние 5 валидных строк (после clean_history):
+account_number account_type                date operation  amount  balance_after  status
+    ACC-100004      savings 2025-10-19 22:17:26  interest  503.25       10568.20 success
+    ACC-100004      savings 2025-10-19 22:17:26   deposit  696.00       10852.20 success
+    ACC-100004      savings 2025-10-19 22:17:26   deposit  671.00       10064.95 success
+    ACC-100004      savings 2025-10-19 22:17:26   deposit  696.00       10852.20 success
+    ACC-100004      savings 2025-10-19 22:17:26  interest  503.25       10568.20 success
+
+Баланс до load_history: 0.00, операций в истории: 0
+Баланс после load_history (CSV+JSON): 23558.88, операций добавлено: 94
+
+Краткая история операций (последние 10 записей):
+2025-10-15 22:17:26 | deposit | amount=789.0 | balance=21690.5 | status=success
+2025-10-17 22:17:26 | withdraw | amount=286.0 | balance=21404.5 | status=success
+2025-10-17 22:17:26 | deposit | amount=864.0 | balance=22268.5 | status=success
+2025-10-19 22:17:26 | deposit | amount=696.0 | balance=22964.5 | status=success
+2025-10-19 22:17:26 | interest | amount=503.25 | balance=23467.75 | status=success
+2025-10-19 22:17:26 | withdraw | amount=300.0 | balance=23167.75 | status=success
+2025-10-19 22:17:26 | withdraw | amount=300.0 | balance=22867.75 | status=success
+2025-10-19 22:17:26 | deposit | amount=671.0 | balance=23538.75 | status=success
+2025-10-20 22:17:26 | interest | amount=302.13 | balance=23840.88 | status=success
+2025-10-23 22:17:26 | withdraw | amount=282.0 | balance=23558.88 | status=success
+
+Топ-3 крупных операций (get_largest_operations):
+2025-10-02 22:17:26 | deposit | 937.0₽ | Баланс: 4312.0₽
+2025-10-02 22:17:26 | deposit | 937.0₽ | Баланс: 16091.44₽
+2025-10-17 22:17:26 | deposit | 864.0₽ | Баланс: 10489.06₽
+
+--------------------------------------------------------------------------------
+Итоговая сводка по всем аккаунтам
+--------------------------------------------------------------------------------
+ACC-100001 -> баланс: 19004.00, операций в истории: 66
+ACC-100002 -> баланс: 23558.88, операций в истории: 94
+ACC-100003 -> баланс: 19004.00, операций в истории: 66
+ACC-100004 -> баланс: 23558.88, операций в истории: 94
+
+--------------------------------------------------------------------------------
+Проверка дополнительных правил (Savings withdrawal ограничение и apply_interest)
+--------------------------------------------------------------------------------
+Пробуем снять 999999 (ожидаем ошибку):
+Ожидаемая ошибка при снятии >50%: Нельзя снять больше 50% от текущего баланса.
+Начислил 7%: баланс 23558.88 -> 25208.00
